@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Abraham Omondi">
+    <meta http-equiv="refresh" content="">
+    <script src="https://kit.fontawesome.com/7793339219.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/home.css">
+    <title>Vidme - the home for videos that matter</title>
+</head>
+<body>
+    <!---header section -->
+    <header>
+        <div class="left-header">
+            <i class="fa fa-bars" onclick="toggle()"></i>
+            <a href="./">
+                <img src="./images/logo.png" alt="">
+            </a>
+        </div>
+        <div class="search-bar" id="search-bar">
+            <form action="" method="get">
+                <div class="search-input-box">
+                    <input type="search" placeholder="Search accounts and videos" name="search">
+                </div>
+                <div class="search-icon">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="right-header">
+            <li><i class="fa fa-search" onclick="search()"></i></li>
+            <li><a href="./upload.html"><i class="fa fa-cloud-arrow-up" title=" Upload Videos"></i></a></li>
+            <li><a href="./account.html"><i class="far fa-user" title="My Account"></i></a></li>
+            <li><a><i class="fa fa-sun" onclick="toggleDarkMode()" title="Dark / Light Mode"></i></a></li>
+        </div>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <!--- vidme sidebar section -->
+        <section class="vidme-sidebar" id="sidebar">
+            <nav>
+                <li><a href="./"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="./videos.html"><i class="fa fa-circle-play"></i>Videos</a></li>
+                <li><a href="./upload.html"><i class="fa fa-cloud-arrow-up"></i>Upload</a></li>
+                <li><a href="./payment.html"><i class="fa fa-money"></i>Payment</a></li>
+                <li><a href="./account.html"><i class="fa fa-user-circle"></i>Account</a></li>
+                <li><a href=""><i class="fa fa-cog"></i>Settings</a></li>
+                <li onclick="toggleDarkMode()"><a><i class="fa fa-sun"></i>Change Theme</a></li>
+                <li><a href="logout.php"><i class="fa fa-right-from-bracket"></i>Logout</a></li>
+            </nav>
+        </section>
+
+
+        <!--- all videos container -->
+        <section class="vidme-video-container">
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail header__img skeleton">
+                    <a href="./single-video.html">
+                        <img src="./images/thumbnail1.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="./channel.html"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="./channel.html">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543,789 views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="./single-video.html">
+                        <img src="./images/thumbnail2.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="./channel.html"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="./channel.html">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="./single-video.html">
+                        <img src="./images/thumbnail3.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="./single-video.html">
+                        <img src="./images/thumbnail4.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543,789 views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="./single-video.html">
+                        <img src="./images/thumbnail5.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="./single-video.html">
+                        <img src="./images/thumbnail6.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail7.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543,789 views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail8.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail9.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail10.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543,789 views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail11.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail12.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail13.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543,789 views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail14.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail1.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail6.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543,789 views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail5.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidme-video-box">
+                <div class="vidme-video-thumbnail">
+                    <a href="#">
+                        <img src="./images/thumbnail10.jpg" alt="">
+                        <i class="fa fa-circle-play"></i>
+                    </a>
+                </div>
+                <div class="vidme-video-details">
+                    <div class="user-photo">
+                        <a href="#"><img src="./images/user1.jpg" alt=""></a>
+                    </div>
+                    <div class="video-meta">
+                        <div class="video-title">
+                            Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        </div>
+                        <div class="video-info">
+                            <div class="video-owner"><a href="#">William Powell</a></div>
+                            <div class="video-views"><i class="fa fa-eye"></i> 543K views</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+</html>

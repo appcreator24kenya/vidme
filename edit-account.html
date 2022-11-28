@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Abraham Omondi">
+    <script src="https://kit.fontawesome.com/7793339219.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/edit-account.css">
+    <title>Edit Account | Vidme</title>
+</head>
+<body>
+    <!---header section -->
+    <header>
+        <div class="left-header">
+            <i class="fa fa-bars" onclick="toggle()"></i>
+            <a href="./">
+                <img src="./images/logo.png" alt="">
+            </a>
+        </div>
+        <div class="search-bar" id="search-bar">
+            <form action="" method="get">
+                <div class="search-input-box">
+                    <input type="search" placeholder="Search accounts and videos" name="search">
+                </div>
+                <div class="search-icon">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="right-header">
+            <li><i class="fa fa-search" onclick="search()"></i></li>
+            <li><a href="./upload.html"><i class="fa fa-cloud-arrow-up" title=" Upload Videos"></i></a></li>
+            <li><a href="./account.html"><i class="far fa-user" title="My Account"></i></a></li>
+            <li><a><i class="fa fa-sun" onclick="toggleDarkMode()" title="Dark / Light Mode"></i></a></li>
+        </div>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <!--- vidme sidebar section -->
+        <section class="vidme-sidebar" id="sidebar">
+            <nav>
+                <li><a href="./"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="./videos.html"><i class="fa fa-circle-play"></i>Videos</a></li>
+                <li><a href="./upload.html"><i class="fa fa-cloud-arrow-up"></i>Upload</a></li>
+                <li><a href="./payment.html"><i class="fa fa-money"></i>Payment</a></li>
+                <li><a href="./account.html"><i class="fa fa-user-circle"></i>Account</a></li>
+                <li><a href=""><i class="fa fa-cog"></i>Settings</a></li>
+                <li onclick="toggleDarkMode()"><a><i class="fa fa-sun"></i>Change Theme</a></li>
+                <li><a href="logout.php"><i class="fa fa-right-from-bracket"></i>Logout</a></li>
+            </nav>
+        </section>
+
+
+        <!--- video upload container -->
+        <form action="" method="post" class="vidme-channel-container">
+            <div class="left-section">
+                <div class="channel-poster">
+                    <img src="./images/thumbnail12.jpg" alt="">
+                    <img src="./images/user2.jpg" alt="" class="channel-icon">
+                    <div class="channel-user-detail">
+                        <div><h3>Kevin Powell &nbsp;<i class="fa fa-circle-check" title="Verified"></i></h3></div>
+                        <div>7.2M Followers</div>
+                    </div>
+                </div>
+                <div class="channel-header">
+                    <h3>Edit your channel</h3>
+                    <button type="submit" class="submit-btn">Update Details</button>
+                </div><br>
+                <div class="two-column">
+                    <div class="form-group">
+                        <div class="input-box">
+                            <label>Channel Name</label>
+                            <input type="text" name="channel_name" placeholder="Kevin Powell">
+                        </div>
+                        <div class="input-box">
+                            <label>Channel Icon</label>
+                            <input type="file" name="channel_icon" placeholder="icon.png" accept="image/png , image/jpg , image/svg">
+                        </div>
+                        <div class="input-box">
+                            <label>Channel Poster</label>
+                            <input type="file" name="channel_icon" accept="image/png , image/jpg , image/svg , image/webp">
+                        </div>
+                        <div class="input-box">
+                            <label>Status</label>
+                            <select name="channel_status" id="">
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-box">
+                            <label>Channel Description</label>
+                            <textarea name="" id="" rows="15">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis in omnis consequuntur quis recusandae, sapiente doloremque odit laborum optio animi quae corporis non ipsam suscipit, delectus perferendis aliquam ipsum? Suscipit!</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <h3>About Channel</h3><br>
+                <div class="">
+                    <div>Followers <b>7,234,567</b><br></div>
+                    <div>Total Views <b>10,987,654</b></div>
+                    <div>Total Videos <b>10,987,654</b></div>
+                </div><br>
+                <b class="channel-header"><span>Social Links</span></a></b><br>
+                <div class="social-links">
+                    <div class="input-box">
+                        <label>Facebook</label>
+                        <input type="url" name="facebook" id="">
+                    </div>
+                    <div class="input-box">
+                        <label>Twiiter</label>
+                        <input type="url" name="twitter" id="">
+                    </div>
+                    <div class="input-box">
+                        <label>Instagram</label>
+                        <input type="url" name="instagram" id="">
+                    </div>
+                    <div class="input-box">
+                        <label>YouTube</label>
+                        <input type="url" name="youtube" id="">
+                    </div>
+                    <div class="input-box">
+                        <label>Website</label>
+                        <input type="url" name="website" id="">
+                    </div>
+                </div>
+            </div>
+        </form> 
+    </main>
+    
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/about.js"></script>
+</body>
+</html>
